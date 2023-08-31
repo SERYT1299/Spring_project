@@ -6,6 +6,8 @@
 </head>
 <body>
 	<h1>FizzBuzz</h1>
-		<p th:text="${result}"></p>
+		<ul th:each="list : ${result}">
+	<li th:text="${list}"></li>
+</ul>
 </body>
 </html>

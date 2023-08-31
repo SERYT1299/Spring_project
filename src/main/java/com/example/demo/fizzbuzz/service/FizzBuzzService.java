@@ -1,4 +1,4 @@
-package com.example.demo.fizzbuzz;
+package com.example.demo.fizzbuzz.service;
 
 import java.util.ArrayList;
 import java.util.List;
