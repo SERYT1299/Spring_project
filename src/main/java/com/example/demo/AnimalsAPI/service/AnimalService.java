@@ -22,8 +22,8 @@ public class AnimalService {
 		return Arrays.asList(animalList);
 	}
 
-	public List<AnimalsData> getSelectedAnimalsData(String animalid) throws IOException {
-		AnimalsData[] matchingAnimalsList = animalsRepository.getAnimalDetailByName(animalid);
+	public List<AnimalsData> getSelectedAnimalsData(String animalId) throws IOException {
+		AnimalsData[] matchingAnimalsList = animalsRepository.getAnimalDetailByName(animalId);
 		return Arrays.asList(matchingAnimalsList);
 	}
 }

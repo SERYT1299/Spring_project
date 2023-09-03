@@ -29,8 +29,8 @@ public class AnimalController {
 	}
 
 	@PostMapping("/result")
-	public String animalDetails(@RequestParam("animalid") String animalid, Model model) throws IOException {
-		List<AnimalsData> matchingAnimalsList = animalService.getSelectedAnimalsData(animalid);
+	public String animalDetails(@RequestParam("animalId") String animalId, Model model) throws IOException {
+		List<AnimalsData> matchingAnimalsList = animalService.getSelectedAnimalsData(animalId);
 		model.addAttribute("matchingAnimalsList", matchingAnimalsList);
 		return "animalsResult.html";
 	}
