@@ -29,25 +29,8 @@ public class AnimalsRepository {
         return animalsList;
     }
     
-    public AnimalsData[] getSelectedAnimalsData(String animals) throws IOException {
-
-		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi?id=" + animals;
-
-		RestTemplate rest = new RestTemplate();
-
-		ResponseEntity<String> response = rest.getForEntity(url, String.class);
-
-		String json = response.getBody();
-
-		ObjectMapper mapper = new ObjectMapper();
-
-		AnimalsData[] matchingAnimalsList = mapper.readValue(json, AnimalsData[].class);
-
-		return matchingAnimalsList;
-	}
-    
-    public AnimalsData[] getAnimalDetailByName(String animalName) throws IOException {
-    	 String url = "https://example.com/api/animals?name=" + animalName;
+    public AnimalsData[] getAnimalDetailByName(String animalId) throws IOException {
+    	 String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi?id=" + animalId;
 
     	    RestTemplate rest = new RestTemplate();
 

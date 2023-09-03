@@ -28,14 +28,10 @@ public class AnimalController {
 		return "animalsSearch.html";
 	}
 
-	@PostMapping("/search")
-    public String animalDetails(@RequestParam("animalName") String animalName, Model model) throws IOException {
-
-        List<AnimalsData> matchingAnimalsList = animalService.getSelectedAnimalsData(animalName);
-
-        model.addAttribute("matchingAnimalsList", matchingAnimalsList);
-
-        return "animalsResult.html";
-
+	@PostMapping("/result")
+	public String animalDetails(@RequestParam("animalid") String animalid, Model model) throws IOException {
+		List<AnimalsData> matchingAnimalsList = animalService.getSelectedAnimalsData(animalid);
+		model.addAttribute("matchingAnimalsList", matchingAnimalsList);
+		return "animalsResult.html";
 	}
 }
